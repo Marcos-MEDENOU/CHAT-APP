@@ -1,0 +1,51 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title NodeJs Express Chat App
+        script(src="https://cdn.tailwindcss.com")
+    body(class='h-screen flex flex-col')
+        header(class="")
+            <div class="px-4 bg-white shadow-md sticky top-0 z-20">
+            <nav class="bg-white px-6 relative  sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 mx-auto">
+                <div class="flex flex-row justify-between items-center py-2 mx-auto">
+                    <a href="/"><h2 class="font-bold text-gray-600 text-3xl">Re<span class="bg-[#f84525] text-white px-2 rounded-md">Chat</span></h2></a>      
+                    <div class="group flex flex-col items-center">
+                        <button class="p-2 rounded-lg md:hidden ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-10 fill-current" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" /></svg>
+                        </button>
+                        <div class="hidden group-hover:block md:block absolute md:static bg-white inset-x-0 top-16 py-3 shadow-md md:shadow-none text-gray-600">
+                            <div class="flex flex-row justify-center items-center text-center font-semibold text-gray-500 ">
+                                <a class="px-6 py-1 flex flex-col md:flex-row md:items-center" href="/"> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="fill-current h-10 md:h-5 px-2" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/><path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/></svg>Accueil 
+                                </a>
+                                <a class="px-6 py-1 flex flex-col md:flex-row md:items-center border-b-2 border-[#f84525] border-w-2" href="#"> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" class=" h-10 md:h-5 px-2" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                                </svg>Chat 
+                            </a>
+                            <a class="px-6 py-1 flex flex-col md:flex-row md:items-center  inline-block animate__animated animate__flash " href="/login"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="fill-current h-10 md:h-5 px-2" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/><path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/></svg>Connexion 
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        main(class='flex-1 overflow-hidden')
+            div(class='flex flex-col md:flex-row h-full')
+                div(class='bg-gray-800/10 min-w-52')
+                    p #Steven 
+                    p #Carlton 
+                    p #Marcos 
+                div(class='flex-1 relative')
+                    p Bienvenue ! &nbsp;
+                    strong Tiburce
+
+                    ul 
+                        li Les messages apparaitront ici
+                    form(action='#' method='post' class='p-1 bg-gray-300 flex gap-4 absolute bottom-0 left-0 right-0')
+                        input(type='text' name='message' class='border flex-1 rounded-2xl py-1 pl-4 outline-none')
+                        button(type="submit" class="bg-gray-800 text-white hover:bg-gray-700 cursor-pointer px-4  rounded-md") Envoyer
