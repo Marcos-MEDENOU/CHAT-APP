@@ -1,5 +1,6 @@
 const express = require('express')
 
+require('dotenv').config
 const app=express();
 const path = require('path')
 
@@ -7,7 +8,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser')
 const indexRouter = require('./routes/index');
 const userRouter = require('./routes/user');
-
+const authRouter = require('./routes/auth.js')
 //****************Parametre de la vue ******/
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
@@ -28,6 +29,7 @@ app.use(cookieParser())
 
 app.use('/', indexRouter) // charge toutes les routes du fichier index
 app.use('/user', userRouter)
+app.use('/', authRouter)
 //****************routes**********/
 
 

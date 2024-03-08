@@ -15,7 +15,6 @@ router.get('/user', function(request,response){
 })
 /* Page accueil */
 router.post('/user', function(request,response){
-    
     response.end('User edit')
 })
 

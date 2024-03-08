@@ -4,7 +4,10 @@ const router=express.Router();
 // const app=express();
 
 router.get('/', function(request,response){
-    response.render('index')
+    if(!request.user){
+        return response.redirect('login')
+    }
+    return response.render('index')
 })
 
 module.exports=router;
