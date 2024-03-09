@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const router=express.Router();
 
@@ -22,6 +23,5 @@ router.get('/login', function(req,res){
 })
 
 router.get('/auth/google', passport.authenticate('google',{scope:['']}))
-
 
 module.exports=router;
